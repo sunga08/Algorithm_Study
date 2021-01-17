@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-#include <iostream>
-=======
 ﻿#include <iostream>
->>>>>>> Stashed changes
 #include <vector>
 
 using namespace std;
@@ -40,11 +36,9 @@ int solution(int n, vector<int> lost, vector<int> reserve) {
 
 	return answer;
 }
-<<<<<<< Updated upstream
-=======
 
 int main()
 {
 
 }
->>>>>>> Stashed changes
+
