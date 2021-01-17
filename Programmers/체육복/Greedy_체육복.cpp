@@ -3,15 +3,6 @@
 #include <vector>
 using namespace std;
 
-//int solution(int n, vector<int> lost, vector<int> reserve);
-
-//int main()
-//{
-//    int r = solution(4, {2,3}, {3,4});
-//    printf("%d\n", r);
-//
-//    return 0;
-//}
 
 int solution(int n, vector<int> lost, vector<int> reserve) {
     int cnt = 0;
@@ -41,3 +32,10 @@ int solution(int n, vector<int> lost, vector<int> reserve) {
     return answer;
 }
 
+//int main()
+//{
+//    int r = solution(4, {2,3}, {3,4});
+//    printf("%d\n", r);
+//
+//    return 0;
+//}
