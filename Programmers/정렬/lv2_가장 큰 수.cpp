@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//정렬 - 사용자 정의 함수 이용
+
 //정렬이 일어나는 방향으로 true를 반환해야 한다.
 //합친 문자를 비교해서 오름차순으로 정렬
 bool compare(string a, string b) {
