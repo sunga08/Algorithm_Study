@@ -4,25 +4,26 @@
 using namespace std;
 const int MAX = 2000000;
 bool visit[MAX];
-int btn[MAX] = {-1,};
+//int btn[MAX] = {-1,};
 
 int main()
 {
     int f, s, g, u, d;
     scanf("%d %d %d %d %d", &f, &s, &g, &u, &d);
+    vector<int> btn(f + 1, -1);
 
     queue<int> q;
     q.push(s);
     visit[s] = true;
     btn[s] = 0;
     
-    int ans = -1; //이거 없이 왜 안되는지??
+    //int ans = -1; //이거 없이 왜 안되는지?? (btn[]이 제대로 초기화되지 않았음)
     while (!q.empty()) {
         int now = q.front();     
         q.pop();
         
         if (now == g) {
-            ans = btn[now];
+            //ans = btn[now];
             break;
         }
         if (now + u <= f && visit[now+u]==false) {
@@ -39,8 +40,8 @@ int main()
         }
     }
 
-    if (ans != -1) {
-        printf("%d", ans);
+    if (btn[g] != -1) {
+        printf("%d", btn[g]);
     }
     else {
         printf("use the stairs");
