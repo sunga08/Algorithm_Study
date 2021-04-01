@@ -6,7 +6,7 @@
 
 using namespace std;
 
-vector<pair<int, int>> memo(40); //memo[i] = fibo(i)가 계산된 값
+vector<pair<int, int>> memo(40); //memo[i] = fibo(i)가 계산된 값, (0의 갯수, 1의 갯수) 쌍으로 저장
 
 pair<int,int> fibo(int n) {
     if (n == 0) {
