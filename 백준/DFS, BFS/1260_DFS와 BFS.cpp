@@ -41,8 +41,8 @@ int main()
     int n, m, start; //노드, 간선, 시작점
     scanf("%d %d %d", &n, &m, &start);
 
-    vector<vector<int>> graph(n + 1);
-    vector<bool> check(n + 1);
+    vector<vector<int>> graph(n + 1); //인접리스트
+    vector<bool> check(n + 1); 
 
     for (int i = 0; i < m; i++) {
         int u, v;
@@ -52,6 +52,8 @@ int main()
         graph[v].push_back(u);
     }
 
+    //정점 번호가 작은 것을 먼저 방문한다고 했으므로 정렬
+    //(인접리스트는 연결되어 있는 정점을 검사하는 순서가 인접리스트에 저장되어 있는 순서와 같기 때문에 정렬 필요)
     for (int i = 0; i < n; i++) {
         sort(graph[i].begin(), graph[i].end());
     }
