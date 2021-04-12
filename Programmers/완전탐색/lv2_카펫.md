@@ -1,3 +1,5 @@
+- 넓이를 기준으로 가능한 가로, 세로를 구하고 yellow, brown의 개수와 맞는지 확인하는 방법
+```c++
 #include <iostream>
 #include <vector>
 
@@ -27,3 +29,32 @@ vector<int> solution(int brown, int yellow) {
 
     return answer;
 }
+```
+
+### 21.04.12
+- 안쪽 직사각형의 가로, 세로를 x,y로 놓고 넓이가 될 수 있는 것을 찾음
+```c++
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(int brown, int yellow) {
+    vector<int> answer;
+    
+    for(int i=1;i<=yellow;i++){
+        if(yellow%i==0){
+            int x = yellow/i;
+            int y = i;
+            if(x<y) continue;
+            if((x+2)*(y+2)==brown+yellow){
+                answer.push_back(x+2);
+                answer.push_back(y+2);
+                break; //**넣고 나면 빠져나오기**
+            }
+        }
+    }
+    
+    return answer;
+}
+```
