@@ -1,4 +1,4 @@
-//multiet으로 구현 (중복 원소 허용, 삽입시 자동 정렬)
+//multiset으로 구현 (중복 원소 허용, 삽입시 자동 정렬)
 
 #include <iostream>
 #include <queue>
@@ -47,7 +47,7 @@ int main()
         else {
             set<int>::iterator it = ms.end();
             it--;
-            cout << *it << " " << *ms.begin()<<"\n";
+            cout << *it << " " << *ms.begin()<<"\n"; //최댓값=마지막 원소, 최솟값=첫번째 원소
         }
     }
 
